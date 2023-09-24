@@ -1,9 +1,9 @@
-const Index = (req, res) => {
-    res.sendFile(__dirname + '/user.html')
+const Users = (req, res) => {
+    res.render('users', { title: 'User Page'})
 }
 
 
-const GetUser = (req, res) => {
+const GetUsers = (req, res) => {
     console.log(req.params)
     const q = req.query
     console.log(q)
@@ -11,6 +11,6 @@ const GetUser = (req, res) => {
 }
 
 module.exports = {
-    Index,
-    GetUser
+    Users,
+    GetUsers
 }
